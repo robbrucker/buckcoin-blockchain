@@ -15,6 +15,11 @@
 
 ```pip3 install pymongo```
 
+```pip3 install names```
+
 
 # Step 3
 - Run `python3 run.py`
+
+
+This will generate 20 chains with 20 blocks in each chain and store them in a mongo db. 

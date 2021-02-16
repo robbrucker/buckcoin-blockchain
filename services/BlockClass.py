@@ -38,7 +38,7 @@ class Block:
             old_record = self.ledger.find({"previous_hash": self.genesis_key})
             print("See count ", old_record.count())
             if old_record.count() != 0:
-                print("Gensis already exists")
+                print("Genesis already exists")
                 record = {}
             else:
                 record = self.ledger.insert_one(block)
@@ -50,11 +50,12 @@ class Block:
 
 
 
-    def new_transaction(self, sender, recipient, amount):
+    def new_transaction(self, sender, recipient, amount, type='buckcoin'):
         transaction = {
             'sender': sender,
             'recipient': recipient,
-            'amount': amount
+            'amount': amount,
+            'type': type
         }
         self.pending_transactions.append(transaction)
         return self.last_block
