@@ -22,4 +22,4 @@
 - Run `python3 run.py`
 
 
-This will generate 20 chains with 20 blocks in each chain and store them in a mongo db. 
+This will ping chain 20 times, each time with 20 blocks and store them in a mongo db consisting of entire chain. 
